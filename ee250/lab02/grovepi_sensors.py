@@ -38,16 +38,16 @@ if __name__ == '__main__':
     PORT = 4    # D4
     potentiometer = 0
     grovepi.pinMode(potentiometer,"INPUT")
-    
+
     while True:
       time.sleep(0.2)
-      print("hi ninainai")
+      print("hi nfdwfi")
       #So we do not poll the sensors too quickly which may introduce noise,
       # sleep for a reasonable time of 200ms between each iteration.
       range = grovepi.ultrasonicRead(PORT)
       threshold = grovepi.analogRead(potentiometer)
-      setText(" "+str(threshold)+"cm/n")
-      setText(" "+str(range)+"cm")
+      setText(" "+str(threshold)+"cm")
+     # setText(" "+str(range)+"cm")
       # if range < threshold:
       #   setText(" "+str(threshold)+"cm OBJ PRES")
       
