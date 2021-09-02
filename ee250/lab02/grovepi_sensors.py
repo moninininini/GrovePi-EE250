@@ -43,8 +43,8 @@ if __name__ == '__main__':
       print("hi nmlgb")
       #So we do not poll the sensors too quickly which may introduce noise,
       # sleep for a reasonable time of 200ms between each iteration.
-      # range = grovepi.ultrasonicRead(PORT)
-      # setText(str(range))
+      range = grovepi.ultrasonicRead(PORT)
+      setText(str(range))
       # threshold = grovepi.analogRead(potentiometer)
       # print("threshold is: ", threshold)
       # print("range: ",range)
