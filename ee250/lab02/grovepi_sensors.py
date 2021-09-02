@@ -41,14 +41,12 @@ if __name__ == '__main__':
 
     while True:
       time.sleep(0.2)
-      print("hi cnm")
+      print("hi cnmmm")
       #So we do not poll the sensors too quickly which may introduce noise,
       # sleep for a reasonable time of 200ms between each iteration.
       range = grovepi.ultrasonicRead(PORT)
       threshold = grovepi.analogRead(potentiometer)
-      setText(" "+str(threshold)+"cm")
-      textCommand(0x28)
-      setText(" "+str(range)+"cm")
+      setText(" "+str(threshold)+"cm\n "+str(range)+"cm")
       # if range < threshold:
       #   grovepi.textCommand(0x01)
       #   setText(" "+str(threshold)+"cm OBJ PRES")
