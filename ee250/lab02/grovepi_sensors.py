@@ -47,11 +47,7 @@ if __name__ == '__main__':
       range = grovepi.ultrasonicRead(PORT)
       threshold = grovepi.analogRead(potentiometer)
       setText(" "+str(threshold)+"cm\n "+str(range)+"cm")
-      # if range < threshold:
-      #   grovepi.textCommand(0x01)
-      #   setText(" "+str(threshold)+"cm OBJ PRES")
-      
-      # print("threshold is: ", threshold)
-      # print("range: ",range)
-    
-      # sensor_value = grovepi.analogRead(potentiometer)
+      if range < threshold:
+        setText(" "+str(threshold)+"cm OBJ PRES\n "+str(range)+"cm")
+
+        
