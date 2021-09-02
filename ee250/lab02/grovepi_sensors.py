@@ -32,15 +32,15 @@ is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will
 be true"""
 
 # Connect the Grove Rotary Angle Sensor to analog port A0
-potentiometer = 0
+
 
 if __name__ == '__main__':
     PORT = 4    # D4
-  
+    potentiometer = 0
    
     while True:
       time.sleep(0.2)
-      print("hi nmlgb")
+      print("hi ninainai")
       #So we do not poll the sensors too quickly which may introduce noise,
       # sleep for a reasonable time of 200ms between each iteration.
       range = grovepi.ultrasonicRead(PORT)
