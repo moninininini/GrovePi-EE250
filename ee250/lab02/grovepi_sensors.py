@@ -36,12 +36,11 @@ potentiometer = 0
 
 if __name__ == '__main__':
     PORT = 4    # D4
-    setText("Hello world\nThis is an LCD test")
-    setRGB(0,128,64)
-    time.sleep(2)
+  
+   
     while True:
       time.sleep(0.2)
-      print("hi")
+      print("hi nmlgb")
       #So we do not poll the sensors too quickly which may introduce noise,
       # sleep for a reasonable time of 200ms between each iteration.
       # range = grovepi.ultrasonicRead(PORT)
