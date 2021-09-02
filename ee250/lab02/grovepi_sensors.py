@@ -37,7 +37,8 @@ be true"""
 if __name__ == '__main__':
     PORT = 4    # D4
     potentiometer = 0
-   
+    grovepi.pinMode(potentiometer,"INPUT")
+    
     while True:
       time.sleep(0.2)
       print("hi ninainai")
