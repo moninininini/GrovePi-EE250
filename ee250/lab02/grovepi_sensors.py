@@ -42,7 +42,7 @@ if __name__ == '__main__':
     while True:
       #So we do not poll the sensors too quickly which may introduce noise,
       # sleep for a reasonable time of 200ms between each iteration.
-      time.sleep(0.2)
+      # time.sleep(0.2)
       setRGB(0,255,0)
       print("hi Enji Love you")
       range = grovepi.ultrasonicRead(PORT)
