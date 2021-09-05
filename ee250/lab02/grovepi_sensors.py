@@ -47,8 +47,8 @@ if __name__ == '__main__':
       print("hi Enji Love you")
       range = grovepi.ultrasonicRead(PORT)
       threshold = grovepi.analogRead(potentiometer)
-      setText_norefresh(" "+str(threshold)+"cm\n "+str(range)+"cm")
-      textCommand(0x01)
+      setText_norefresh(" "+str(threshold)+"cm         \n "+str(range)+"cm")
+      
       if range < threshold:
         setRGB(255,0,0)
         setText_norefresh(" "+str(threshold)+"cm OBJ PRES\n "+str(range)+"cm")
