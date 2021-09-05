@@ -50,7 +50,7 @@ if __name__ == '__main__':
       
       if range < threshold:
         setText_norefresh(" "+str(threshold)+"cm OBJ PRES\n "+str(range)+"cm")
-      
-      setText_norefresh(" "+str(threshold)+"cm           \n "+str(range)+"cm")
+      if range > threshold:
+        setText_norefresh(" "+str(threshold)+"cm           \n "+str(range)+"cm")
 
 
