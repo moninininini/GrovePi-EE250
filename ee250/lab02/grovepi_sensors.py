@@ -49,8 +49,18 @@ if __name__ == '__main__':
       threshold = grovepi.analogRead(potentiometer)
       
       if range < threshold:
-        setText_norefresh(" "+str(threshold)+"cm OBJ PRES\n "+str(range)+"cm")
+        if threshold < 100:
+          setText_norefresh("  "+str(threshold)+"cm OBJ PRES\n"+str(range)+"cm")
+        elif threshold > 999:
+          setText_norefresh(str(threshold)+"cm OBJ PRES\n"+str(range)+"cm")
+        else:
+          setText_norefresh(" "+str(threshold)+"cm OBJ PRES\n "+str(range)+"cm")
       if range > threshold:
-        setText_norefresh(" "+str(threshold)+"cm         \n "+str(range)+"cm")
+        if threshold < 100:
+          setText_norefresh("  "+str(threshold)+"cm          \n"+str(range)+"cm")
+        elif threshold > 999:
+          setText_norefresh(str(threshold)+"cm          \n"+str(range)+"cm")
+        else:
+          setText_norefresh(" "+str(threshold)+"cm          \n "+str(range)+"cm")
 
 
