@@ -1,12 +1,13 @@
-""" EE 250L Lab 02: GrovePi Sensors
+""" 
+EE 250L Lab 02: GrovePi Sensors
 
 List team members here.
-Monica Li
+  Monica Li
 
 Insert Github repository link here.
-"https://github.com/moninininini/GrovePi-EE250"
+"https://github.com/moninininini/GrovePi-EE250/tree/lab02"
 
-"python3 interpreters in Ubuntu (and other linux distros) will look in a 
+python3 interpreters in Ubuntu (and other linux distros) will look in a 
 default set of directories for modules when a program tries to `import` one. 
 Examples of some default directories are (but not limited to):
   /usr/lib/python3.5
@@ -15,6 +16,7 @@ Examples of some default directories are (but not limited to):
 The `sys` module, however, is a builtin that is written in and compiled in C for
 performance. Because of this, you will not find this in the default directories.
 """
+
 import sys
 import time
 # By appending the folder of all the GrovePi libraries to the system path here,
@@ -36,25 +38,31 @@ be true"""
 
 if __name__ == '__main__':
     PORT = 4    # D4
-    potentiometer = 0
+    potentiometer = 0 # connect the potentiometer to port A0
     grovepi.pinMode(potentiometer,"INPUT")
 
     while True:
-      #So we do not poll the sensors too quickly which may introduce noise,
+      # So we do not poll the sensors too quickly which may introduce noise,
       # sleep for a reasonable time of 200ms between each iteration.
       time.sleep(0.2)
-      setRGB(0,255,0)
-      print(str(range))
+      setRGB(0,255,0) # set to green color
+      
+      # set variables to read ultrasonic ranging results and potentiometer reading
       range = grovepi.ultrasonicRead(PORT)
       threshold = grovepi.analogRead(potentiometer)
       
+      # if the object is close, print OBJ PRES
       if range < threshold:
+        # output the threshold and distance values on the LCD screen
+        # add additional whitespaces according to different threshold values to erase screen
         if threshold < 100:
           setText_norefresh("  "+str(threshold)+"cm OBJ PRES\n "+str(range)+"cm")
         elif threshold > 999:
           setText_norefresh(str(threshold)+"cm OBJ PRES\n "+str(range)+"cm")
         else:
           setText_norefresh(" "+str(threshold)+"cm OBJ PRES\n "+str(range)+"cm")
+      
+      # if the object is far away
       if range > threshold:
         if threshold < 100:
           setText_norefresh("  "+str(threshold)+"cm          \n "+str(range)+"cm")
