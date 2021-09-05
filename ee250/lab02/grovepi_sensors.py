@@ -50,17 +50,17 @@ if __name__ == '__main__':
       
       if range < threshold:
         if threshold < 100:
-          setText_norefresh("  "+str(threshold)+"cm OBJ PRES\n"+str(range)+"cm")
+          setText_norefresh("  "+str(threshold)+"cm OBJ PRES\n  "+str(range)+"cm")
         elif threshold > 999:
-          setText_norefresh(str(threshold)+"cm OBJ PRES\n"+str(range)+"cm")
+          setText_norefresh(str(threshold)+"cm OBJ PRES\n  "+str(range)+"cm")
         else:
-          setText_norefresh(" "+str(threshold)+"cm OBJ PRES\n "+str(range)+"cm")
+          setText_norefresh(" "+str(threshold)+"cm OBJ PRES\n  "+str(range)+"cm")
       if range > threshold:
         if threshold < 100:
-          setText_norefresh("  "+str(threshold)+"cm          \n"+str(range)+"cm")
+          setText_norefresh("  "+str(threshold)+"cm          \n  "+str(range)+"cm")
         elif threshold > 999:
-          setText_norefresh(str(threshold)+"cm          \n"+str(range)+"cm")
+          setText_norefresh(str(threshold)+"cm          \n  "+str(range)+"cm")
         else:
-          setText_norefresh(" "+str(threshold)+"cm          \n "+str(range)+"cm")
+          setText_norefresh(" "+str(threshold)+"cm          \n  "+str(range)+"cm")
 
 
