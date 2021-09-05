@@ -29,12 +29,10 @@ import grovepi
 from grove_rgb_lcd import *
 
 grovepi.set_bus("RPI_1")
+
 """This if-statement checks if you are running this python file directly. That 
 is, if you run `python3 grovepi_sensors.py` in terminal, this if-statement will 
 be true"""
-
-# Connect the Grove Rotary Angle Sensor to analog port A0
-
 
 if __name__ == '__main__':
     PORT = 4    # D4
